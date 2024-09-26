@@ -153,10 +153,9 @@ public class UserNewJFrame extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jTextFieldage, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(UserjLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextFieldlname, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE)
-                        .addComponent(jTextFieldfname, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addComponent(UserjLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldlname, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE)
+                    .addComponent(jTextFieldfname)
                     .addComponent(jTextFieldemail)
                     .addComponent(jTextFieldphone))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -235,9 +234,22 @@ public class UserNewJFrame extends javax.swing.JFrame {
         System.out.println(this.jTextFieldage.getText());
         System.out.println(this.buttonGroupGender.getSelection().getActionCommand());
         
-        JOptionPane.showMessageDialog(this, displayMessage);
         
-        }catch(NullPointerException nx){
+        if (age>=0 && age<=150 && phone.matches("\\d{10}") && email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$"))
+        {
+            JOptionPane.showMessageDialog(this, displayMessage);
+            
+        } 
+        else
+                {
+                JOptionPane.showMessageDialog(this,"Invalid Details,Please Enter Again!");
+}
+        
+        }catch(NumberFormatException ne){
+            System.out.println("Display Exception!!!");
+            System.out.println(ne);
+        }
+        catch(NullPointerException nx){
             String errorMessage="Invalid Credentials for registration: ";
             JOptionPane.showMessageDialog(this, errorMessage);
         
@@ -248,6 +260,7 @@ public class UserNewJFrame extends javax.swing.JFrame {
             System.out.println(e);
             
         }
+        
     }//GEN-LAST:event_jButtonSubmitActionPerformed
 
     private void jTextFieldlnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldlnameActionPerformed

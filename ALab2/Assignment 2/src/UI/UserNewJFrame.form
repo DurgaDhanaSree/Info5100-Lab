@@ -116,11 +116,9 @@
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
                       <Component id="jTextFieldage" pref="184" max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="UserjLabel1" alignment="0" min="-2" pref="167" max="-2" attributes="0"/>
-                          <Component id="jTextFieldlname" alignment="1" pref="183" max="32767" attributes="0"/>
-                          <Component id="jTextFieldfname" alignment="1" max="32767" attributes="0"/>
-                      </Group>
+                      <Component id="UserjLabel1" alignment="0" min="-2" pref="167" max="-2" attributes="0"/>
+                      <Component id="jTextFieldlname" alignment="1" pref="183" max="32767" attributes="0"/>
+                      <Component id="jTextFieldfname" alignment="1" max="32767" attributes="0"/>
                       <Component id="jTextFieldemail" alignment="1" max="32767" attributes="0"/>
                       <Component id="jTextFieldphone" alignment="1" max="32767" attributes="0"/>
                   </Group>
